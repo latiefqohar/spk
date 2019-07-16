@@ -3,8 +3,8 @@ Aplikasi Surat Perintah Kerja
 ###################
 
 Repo ini berisi
--aplikasi SPK 
-  ->input data
+-Aplikasi SPK 
+  ->Proses 
 	->input PO
 	->input SPK
 	->transaksi produksi
