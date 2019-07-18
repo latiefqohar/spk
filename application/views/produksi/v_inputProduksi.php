@@ -13,7 +13,8 @@
             </tr>
             <tr>
                 <td>No SPK</td>
-                <td><?php echo $spk['kode_spk'] ?><input type="text" name="no_spk" id="no_spk" class="form-control" value="<?php echo $spk['no_spk'] ?>" readonly></td>
+                <td><input type="text"   class="form-control" value="<?php echo $spk['kode_spk'],$spk['no_spk'] ?>" readonly></td>
+                <input type="hidden" id="no_spk" name="no_spk" value="<?php echo $spk['no_spk'] ?>">
                 <td>No Barcode</td>
                 <td><input type="text" name="barcode" class="form-control" value="<?php echo $spk['barcode'] ?>" readonly></td>
             </tr>
@@ -161,7 +162,7 @@ input.addEventListener("click", function() {
    var detail_lokasi=$('#lokasi').val();
    var shift=$('#shift').val();
    var berat=$('#berat').val();
-//    console.log(coil_awal+"/"+coil_akhir);
+   console.log(berat);
    $.ajax({
         type:'POST',
         url:'<?php echo base_url()."spk/hasil_produksi" ?>',
@@ -179,6 +180,7 @@ input.addEventListener("click", function() {
             shift:shift
             },
         dataType:'json',
+        
         success:function(data){
             console.log(data)
             $('#coil_akhir').val('');

@@ -14,18 +14,27 @@
   <body>
     <center><h1>PT. MEGA PRATAMA FERINDO</h1></center>  <br>
     <center><h1>Surat Jalan</h1></center>
-    <table>
+    <table border="0">
         <tr>
             <td ><h6>Vehicle No</h6></td>
             <td style="width:250px;"><h6>:<?php echo $header['vihicle']; ?></h6></td>
+
+        </tr>
+        <tr>
             <td>Tanggal</td>
             <td>:<?php echo $header['tanggal_kirim']; ?></td>
         </tr>
         <tr>
             <td>No PO</td>
             <td>:<?php echo $header['kode_po'],$header['id_po']; ?></td>
-            <td>Berat</td>
-            <td>:<?php echo $header['berat']; ?>KG</td>
+        </tr>
+        <tr>
+            <td>Customer</td>
+            <td>:<strong><?php echo $header['nama']; ?></strong></td>
+        </tr>
+        <tr>
+            <td>Alamat Customer</td>
+            <td>:<?php echo $header['alamat']; ?></td>
         </tr>
       
     </table><br><hr><br>
@@ -34,9 +43,10 @@
         <thead>
         <tr>
         <th>No</th>
-        <th>Barcode</th>
+        <th>Jenis</th>
         <th>diameter</th>
         <th>Quantity</th>
+        <th>Berat</th>
 
 
 
@@ -46,29 +56,27 @@
     <?php
      $qty=0; 
     ?>
-            <?php $no=1; ?>
+            <?php $no=0;$berat=0;
+             ?>
         <?php
             foreach ($wirehouse_entry as $d){ 
         
         ?>
         <tr>
-        <td><?php echo $no++ ?></td>
-        <td><?php echo $d->barcode_produksi ?></td>
-
-        <td><?php echo $d->diameter ?></td>
->
-
-        <td><?php echo $qty+ $d->qty ?></td>
-
-            <?php $qty=$qty+ $d->qty ?>
+        <?php $d->qty ?>
+        <?php $berat=$berat+ $d->berat ?>
+        <?php $qty=$qty+ $d->qty ?>
         </tr>
         <?php
             } 
         ?>
         <tr>
-        <td colspan="2"></td>
-        <td > Total </td>
+        <td>1</td>
+        <td><?php echo $d->jenis ?></td>
+        <td><?php echo $d->diameter ?></td>
+
         <td > <?php echo $qty ?></td>
+        <td > <?php echo $berat ?>KG</td>
 
         </tr>
         <script>window.print()</script>

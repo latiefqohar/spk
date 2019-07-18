@@ -5,6 +5,7 @@
         parent::__construct();
         $this->load->model('m_crud');
         $this->load->helper('url');
+        date_default_timezone_set('Asia/Jakarta');
         
         
     }
@@ -101,6 +102,7 @@
         $data = array(
             'no_spk' => $no_spk,
             'jenis'=> $jenis,
+            'berat'=> $berat,
             'diameter'=>$diameter,
             'heat_no'=>$heat_no,
             'coil'=>$coil_no,

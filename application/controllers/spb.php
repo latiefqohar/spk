@@ -5,6 +5,7 @@
         parent::__construct();
         $this->load->model('m_crud');
         $this->load->library('session');
+        date_default_timezone_set('Asia/Jakarta');
         
     }
  
@@ -150,7 +151,11 @@
 
     public function delete_hasil(){
         $id=$this->input->post('id');
+        $barcode_produksi=$this->input->post('barcode');
+        
+        // $id=32545693;
         $this->m_crud->delete_data(array('id'=>$id),'wirehouse_entry');
+        $this->m_crud->update_data(array('barcode_produksi'=>$barcode_produksi),array('status'=>0),'wirerod_produksi');
             }
 
         public function kirim_barang(){

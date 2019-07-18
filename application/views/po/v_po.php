@@ -66,11 +66,11 @@
         </td>
         <td style="width:100px">
         <?php
-         if(($d->no_spk===NULL&&$this->session->userdata('departemen')=='PPIC')||$this->session->userdata('level')=='Super Admin'){ 
+         if(($d->no_spk===NULL&&$this->session->userdata('departemen')=='PPIC')||($d->status==0&&$this->session->userdata('level')=='Super Admin')){ 
         ?>
             <a href="<?php echo base_url() ?>po/buat_spk/<?php echo $d->id_po ?>" class="btn btn-success"> Buat Spk</a>
         <?php
-         }elseif(($d->status==1&&$this->session->userdata('marketing')=='PPIC')||$this->session->userdata('level')=='Super Admin'){ ?>
+         }elseif(($d->status==1&&$this->session->userdata('departemen')=='PPIC')||($d->status==1&&$this->session->userdata('level')=='Super Admin')){ ?>
              <a href="<?php echo base_url() ?>po/buat_spb/<?php echo $d->id_po ?>" class="btn btn-info"> Buat SPB</a>
         <?php }elseif($d->status==2){ 
             echo "SPB selesai";

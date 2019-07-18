@@ -122,7 +122,7 @@
         $this->load->view('v_footer');
     }
     public function warehouse(){
-        $where = array('lokasi' =>'finish good' );
+        $where = array('lokasi' =>'finish good','status'=>0);
         $data['wirerod_produksi']=$this->m_crud->edit_data($where,'wirerod_produksi')->result();
         $this->load->view('v_header');
         $this->load->view('produksi/v_wirerod', $data);

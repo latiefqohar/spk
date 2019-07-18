@@ -35,8 +35,7 @@
                 'departemen'=>$departemen,
                 'jabatan'=>$jabatan,
                 'username'=>$username,
-                'password'=>md5($password),
-                'level'=>$level
+                'password'=>md5($password)
             );
             $this->m_crud->insert_data($data,'user');
             

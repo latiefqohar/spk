@@ -11,7 +11,8 @@
 				<div class="card-body text-dark">
 				<div class="form-group">
 					<label for="no_spb">No SPB</label>
-					<input type="hidden" name="no_spb" value="<?php echo $spb['no_spb'] ?>" readonly><input type="text" class="form-control" id="spb"  value="<?php echo $spb['kode_spb'],$spb['no_spb'] ?>" placeholder="silahkan masukkan No SPB" readonly>
+					<input type="hidden" name="no_spb" id="spb" value="<?php echo $spb['no_spb'] ?>" >
+					<input type="text" class="form-control"   value="<?php echo $spb['kode_spb'],$spb['no_spb'] ?>" placeholder="silahkan masukkan No SPB" readonly>
 				</div>
 					
 					<div class="row">
@@ -105,6 +106,7 @@
 					<tr>
 						<td><?php echo $no++ ?></td>
 						<td><?php echo $d->barcode_produksi ?></td>
+						<input type="hidden" id="kode_barcode" value="<?php echo $d->barcode_produksi ?>">
 						<td><?php echo $d->jenis ?></td>
 						<td><?php echo $d->diameter ?></td>
 						<td><?php echo $d->heat_no ?></td>
@@ -135,11 +137,14 @@ function myFunction() {
     var yakin=confirm("Apakah anda yakin akan menghapus?");
     if (yakin) {
         var x = document.getElementById("myBtn").value;
+		var bar = document.getElementById("kode_barcode").value;
+		console.log('njsn'+x);
+		console.log(bar);
     $.ajax({
         type:'POST',
         url:'<?php echo base_url()."spb/delete_hasil" ?>',
         data:{
-            id:x
+            id:x,barcode:bar
             },
         success:function(){
             location.reload(true); 
@@ -158,6 +163,7 @@ input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     var barcode=$('#barcode').val();
     var spb=$('#spb').val();
+	console.log(spb);
 	var vihicle=$('#vihicle').val();
 	var tanggal_kirim=$('#tanggal_kirim').val();
 

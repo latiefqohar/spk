@@ -24,10 +24,10 @@
         </div>
         <div class="mr-5"><?php echo $wirerod_produksi ?> WireRod Produksi</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url() ?>wirerod/produksi">
-        <span class="float-left">View Details</span>
+      <a class="card-footer text-white clearfix small z-1" href="#">
+        <span class="float-left"></span>
         <span class="float-right">
-          <i class="fas fa-angle-right"></i>
+
         </span>
       </a>
     </div>
@@ -40,10 +40,10 @@
         </div>
         <div class="mr-5"><?php echo $wirerod_finishgood ?> WireRod finishgood</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url() ?>wirerod/warehouse">
-        <span class="float-left">View Details</span>
+      <a class="card-footer text-white clearfix small z-1" href="#">
+        <span class="float-left"></span>
         <span class="float-right">
-          <i class="fas fa-angle-right"></i>
+
         </span>
       </a>
     </div>
@@ -56,10 +56,10 @@
         </div>
         <div class="mr-5"><?php echo $po ?> PO Menunggu</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url() ?>po">
-        <span class="float-left">View Details</span>
+      <a class="card-footer text-white clearfix small z-1" href="#">
+        <span class="float-left"></span>
         <span class="float-right">
-          <i class="fas fa-angle-right"></i>
+
         </span>
       </a>
     </div>
@@ -72,10 +72,10 @@
         </div>
         <div class="mr-5"><?php echo $spk ?> SPK Menunggu</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url() ?>spk">
-        <span class="float-left">View Details</span>
+      <a class="card-footer text-white clearfix small z-1" href="#">
+        <span class="float-left"></span>
         <span class="float-right">
-          <i class="fas fa-angle-right"></i>
+
         </span>
       </a>
     </div>
@@ -88,10 +88,10 @@
         </div>
         <div class="mr-5"><?php echo $spb ?> SPB Menunggu</div>
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="<?php echo base_url() ?>spb">
-        <span class="float-left">View Details</span>
+      <a class="card-footer text-white clearfix small z-1" href="#">
+        <span class="float-left"></span>
         <span class="float-right">
-          <i class="fas fa-angle-right"></i>
+
         </span>
       </a>
     </div>

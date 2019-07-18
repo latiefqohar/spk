@@ -26,10 +26,7 @@
             <td>Tanggal</td>
             <td>:<?php echo $header['tanggal_kirim']; ?></td>
         </tr>
-        <tr>
-            <td>Berat</td>
-            <td>:<?php echo $header['berat']; ?>KG</td>
-        </tr>
+
     </table><br><hr><br>
     
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -42,6 +39,7 @@
         <th>Heat No</th>
         <th>Coil No</th>
         <th>Quantity</th>
+        <th>Berat</th>
         <th>Tanggal produksi</th>
 
 
@@ -51,7 +49,7 @@
     <?php
      $qty=0; 
     ?>
-            <?php $no=1; ?>
+            <?php $no=1;$berat=0; ?>
         <?php
             foreach ($wirehouse_entry as $d){ 
         
@@ -63,9 +61,11 @@
         <td><?php echo $d->diameter ?></td>
         <td><?php echo $d->heat_no ?></td>
         <td><?php echo $d->coil_no ?></td>
-        <td><?php echo $qty+ $d->qty ?></td>
+        <td><?php echo $d->qty ?></td>
+        <td><?php echo $d->berat ?>KG</td>
         <td><?php echo $d->tanggal_produksi ?></td>
             <?php $qty=$qty+ $d->qty ?>
+            <?php $berat=$berat+ $d->berat ?>
         </tr>
         <?php
             } 
@@ -74,6 +74,7 @@
         <td colspan="5"></td>
         <td > Total </td>
         <td > <?php echo $qty ?></td>
+        <td > <?php echo $berat ?>KG</td>
         <td></td>
         </tr>
         <script>window.print()</script>

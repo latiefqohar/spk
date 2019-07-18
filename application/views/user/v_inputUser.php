@@ -52,17 +52,7 @@
                 <a href="<?php echo base_url() ?>/user" class="btn btn-info float-right"> Kembali</a></<input>
             </td>
             </tr>
-            <tr>
-                <td>Level</td>
-                <td>
-                    <select name="level" class="form-control">
-                        <option value="">-Silahkan Pilih-</option>
-                        <option value="admin">Admin</option>
-                        <option value="Super Admin">Super Admin</option>
-                    </select>
-                </td>
-            </tr>
-
+            
         </table>
     </form>
         </div>

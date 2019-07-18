@@ -28,7 +28,11 @@ $this->db->update($table,$data);
 
 }
 
-
+public function header_sj(){
+    return $this->db->select('
+    a.*,b.*,c.*
+    ')->from('spb a')->join('po b','a.id_po=b.id_po')->join('pelanggan c','b.pelanggan=c.id_pelanggan');
+}
 
 // Akhir fungsi CRUD
 
@@ -82,8 +86,10 @@ public function get_header($id){
     return $this->db->select('
     a.*,
     b.id_po,b.berat,
-    c.kode_po
-')->from('wirehouse_entry a')->join('spb b','a.spb=b.no_spb')->join('po c','b.id_po=c.id_po')->where('a.spb',$id); 
+    c.kode_po,
+    d.nama,
+    d.alamat
+')->from('wirehouse_entry a')->join('spb b','a.spb=b.no_spb')->join('po c','b.id_po=c.id_po')->join('pelanggan d','c.pelanggan=d.id_pelanggan')->where('a.spb',$id); 
 }
 }
 ?>
