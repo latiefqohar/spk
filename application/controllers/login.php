@@ -39,7 +39,7 @@
                 'nama'  => $hasil['nama'],
                 'nik'  => $hasil['Nik'],
                 'departemen'=> $hasil['departemen'],
-
+                'level'=>$hasil['level'],
                 'login' => '1'
             );
             $this->session->set_userdata($arraydata);

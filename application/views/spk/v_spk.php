@@ -19,7 +19,7 @@
 <div class="card mb-3">
     <div class="card-header">
     <i class="fas fa-table"></i>
-    Data po</div>
+    Data SPK</div>
     <div class="card-body">
     <!-- <a href="<?php echo base_url() ?>po/add" class="btn btn-primary"> Tambah Data</a><br> <br> -->
     <a href="<?php echo base_url() ?>spk/spk_pending" class="btn btn-primary" targer="blank"> Cetak SPK menunggu</a>

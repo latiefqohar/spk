@@ -1,7 +1,7 @@
 <div class="card mb-3">
     <div class="card-header">
     <i class="fas fa-table"></i>
-    Input user</div>
+    Input Wirerod</div>
     <div class="card-body">
         <div class="table-responsive">
     <form action="<?php echo base_url() ?>wirerod/add" method='post'>
